@@ -1,0 +1,76 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap");
+@import "./colors";
+@import "./appDemo";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-size: 16px;
+  font-family: "Rubik", sans-serif;
+  font-weight: 400;
+  background-color: #fafafa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+  & > div {
+    margin: 0 50px;
+  }
+}
+.background {
+  &__gradientDiv,
+  &__simpleDiv {
+    width: 310px;
+    height: 80vh;
+    position: absolute;
+    z-index: -1;
+    opacity: 0.9;
+  }
+  &__gradientDiv {
+    @include gradientBG0;
+    top: 0;
+    left: -50px;
+    border-radius: 0 0 175px 175px;
+  }
+  &__simpleDiv {
+    width: 450px;
+
+    background-color: $LightGrayishViolet;
+    bottom: 0;
+    right: -150px;
+    border-radius: 250px 250px 0 0;
+  }
+}
+.details {
+  &__title {
+    color: $VeryDarkDesaturatedViolet;
+    font-weight: 500;
+    font-size: 2.5em;
+  }
+  &__para {
+    color: $DarkGrayishViolet;
+    max-width: 450px;
+  }
+}
+@media screen and (max-width: 900px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 50px;
+    .appDemo {
+      margin-top: 50px;
+    }
+    .details {
+      text-align: center;
+      &__title {
+        margin: 20px 0 10px 0;
+        font-size: 2em;
+      }
+    }
+  }
+}

@@ -1,0 +1,166 @@
+@import "./colors";
+
+.appDemo {
+  background-color: $LightGrayishViolet;
+  width: 240px;
+  height: 480px;
+  border: 15px solid $White;
+  border-radius: 30px;
+  box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.1);
+  font-size: 0.7em;
+  position: relative;
+
+  * {
+    pointer-events: none;
+    user-select: none;
+  }
+  .notch {
+    background-color: $White;
+    height: 18px;
+    width: 130px;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  &__header {
+    @include gradientBGRev();
+    color: $White;
+    padding: 20px 10px 10px 5px;
+    border-radius: 5px;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .icon {
+      height: 15px;
+    }
+    &--left {
+      display: flex;
+      align-items: center;
+
+      .profile-pic {
+        border-radius: 50%;
+        border: 2px solid #fff;
+        overflow: hidden;
+        margin: 0 2px;
+        img {
+          width: 25px;
+        }
+      }
+      .profile-details {
+        .title {
+          font-weight: 500;
+          font-size: 1.1em;
+        }
+        .subtitle {
+          color: $PaleViolet;
+          font-size: 0.8em;
+        }
+      }
+    }
+    .menu {
+      // background-color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      height: 20px;
+      width: 5px;
+      .dot {
+        height: 4px;
+        width: 4px;
+        border-radius: 50%;
+        background-color: $White;
+
+        display: block;
+      }
+    }
+  }
+  &__body {
+    font-size: 0.8em;
+    .chatReply__agent,
+    .chatReply__user,
+    .chatReply__pricing,
+    .chatReply__image_user {
+      max-width: 135px;
+      padding: 4px;
+      margin: 10px 5px;
+      border-radius: 5px;
+    }
+    .chatReply__agent {
+      background-color: rgba(0, 0, 0, 0.05);
+      color: $ModerateViolet;
+    }
+    .chatReply__user {
+      margin: 10px 5px 5px auto;
+      color: $DesaturatedDarkViolet;
+      background-color: $White;
+      box-shadow: 0 10px 50px rgba(0, 0, 0, 0.1);
+    }
+    .chatReply__image_user {
+      margin: 5px 5px 5px auto;
+      display: flex;
+      .sentImg {
+        width: 40px;
+        margin: auto;
+        border-radius: 7px;
+      }
+    }
+    .chatReply__pricing {
+      @include gradientBG();
+      color: $White;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .inner {
+        display: flex;
+        align-items: center;
+
+        .checkbox-circle {
+          margin-right: 2px;
+          height: 15px;
+          width: 15px;
+          display: inline-block;
+          border: 2px solid $VeryLightMagenta;
+          border-radius: 50%;
+        }
+      }
+      .price {
+        font-weight: 700;
+        font-size: 2em;
+      }
+    }
+  }
+  &__footer {
+    display: flex;
+    margin: 0 2px;
+    padding: 2px 5px;
+    border-radius: 15px;
+    background-color: $White;
+    margin-top: 15px;
+    .icon-holder {
+      background-color: $VeryDarkDesaturatedViolet;
+      height: 22px;
+      width: 22px;
+      display: grid;
+      place-content: center;
+      border-radius: 50%;
+      .icon {
+        height: 12px;
+        cursor: pointer;
+      }
+    }
+    .inputbox {
+      width: 100%;
+      color: $GrayishBlue;
+      padding-top: 7px;
+      border-bottom: 1px solid $GrayishBlue;
+      font-size: 0.9em;
+      margin-left: 5px;
+    }
+  }
+}

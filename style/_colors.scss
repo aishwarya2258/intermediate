@@ -1,0 +1,26 @@
+$PaleViolet: hsl(276, 100%, 81%);
+$ModerateViolet: hsl(276, 55%, 52%);
+$DesaturatedDarkViolet: hsl(271, 15%, 43%);
+$GrayishBlue: hsl(206, 6%, 79%);
+$VeryDarkDesaturatedViolet: hsl(271, 36%, 24%);
+$DarkGrayishViolet: hsl(270, 7%, 64%);
+$LightMagentaGr1: hsl(293, 100%, 63%);
+$LightVioletGr2: hsl(264, 100%, 61%);
+$White: hsl(0, 0%, 100%);
+$LightGrayishViolet: hsl(270, 20%, 96%);
+$VeryDarkDesaturatedViolet: hsl(271, 36%, 24%);
+$VeryLightMagenta: hsl(289, 100%, 72%);
+
+@mixin gradientBG {
+  background: $LightVioletGr2;
+  background: linear-gradient(90deg, $LightMagentaGr1 0%, $LightVioletGr2 100%);
+}
+@mixin gradientBGRev {
+  background: $LightVioletGr2;
+  background: linear-gradient(90deg, $LightVioletGr2 0%, $LightMagentaGr1 100%);
+}
+
+@mixin gradientBG0 {
+  background: $LightVioletGr2;
+  background: linear-gradient(0deg, $LightVioletGr2 0%, $LightMagentaGr1 100%);
+}
